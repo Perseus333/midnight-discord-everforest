@@ -43,14 +43,15 @@ body {
 
     /* dms button options */
     --custom-dms-icon: custom; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
-    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='24' height='24'%3E%3Cpath fill='currentColor' d='M0 0h7v1H6v1H5v1H4v1H3v1H2v1h5v1H0V6h1V5h1V4h1V3h1V2h1V1H0m13 2h5v1h-1v1h-1v1h-1v1h3v1h-5V7h1V6h1V5h1V4h-3m8 5h1v5h1v-1h1v1h-1v1h1v-1h1v1h-1v3h-1v1h-2v1h-1v1h1v-1h2v-1h1v2h-1v1h-2v1h-1v-1h-1v1h-6v-1h-1v-1h-1v-2h1v1h2v1h3v1h1v-1h-1v-1h-3v-1h-4v-4h1v-2h1v-1h1v-1h1v2h1v1h1v-1h1v1h-1v1h2v-2h1v-2h1v-1h1M8 14h2v1H9v4h1v2h1v1h1v1h1v1h4v1h-6v-1H5v-1H4v-5h1v-1h1v-2h2m17 3h1v3h-1v1h-1v1h-1v2h-2v-2h2v-1h1v-1h1m1 0h1v3h-1v1h-2v-1h1v-1h1'%3E%3C/path%3E%3C/svg%3E"); /* icon svg url. MUST BE A SVG. */
+    --dms-icon-svg-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27' width='24' height='24'%3E%3Cpath fill='var(--bg-1)' d='M0 0h7v1H6v1H5v1H4v1H3v1H2v1h5v1H0V6h1V5h1V4h1V3h1V2h1V1H0m13 2h5v1h-1v1h-1v1h-1v1h3v1h-5V7h1V6h1V5h1V4h-3m8 5h1v5h1v-1h1v1h-1v1h1v-1h1v1h-1v3h-1v1h-2v1h-1v1h1v-1h2v-1h1v2h-1v1h-2v1h-1v-1h-1v1h-6v-1h-1v-1h-1v-2h1v1h2v1h3v1h1v-1h-1v-1h-3v-1h-4v-4h1v-2h1v-1h1v-1h1v2h1v1h1v-1h1v1h-1v1h2v-2h1v-2h1v-1h1M8 14h2v1H9v4h1v2h1v1h1v1h1v1h4v1h-6v-1H5v-1H4v-5h1v-1h1v-2h2m17 3h1v3h-1v1h-1v1h-1v2h-2v-2h2v-1h1v-1h1m1 0h1v3h-1v1h-2v-1h1v-1h1'%3E%3C/path%3E%3C/svg%3E"); /* icon svg url. MUST BE A SVG. */
     --dms-icon-svg-size: 90%; /* size of the svg (css mask-size property) */
-    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-before: var(--bg-1); /* normal icon color */
     --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
     --custom-dms-background: off; /* off to disable, image to use a background image (must set url variable below), color to use a custom color/gradient */
     --dms-background-image-url: url(''); /* url of the background image */
     --dms-background-image-size: cover; /* size of the background image (css background-size property) */
     --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background property) */
+    --bg-brand: var(--bg-1) !important;
 
     /* background image options */
     --background-image: off; /* off: no background image, on: enable background image (must set url variable below) */
@@ -90,18 +91,18 @@ body {
     --bg-2: hsl(199 11.6% 27.1%); /* dark buttons: BG2 */
     --bg-3: hsl(199 13.3% 23.5%); /* spacing, secondary elements: BG1 */
     --bg-4: hsl(206 13.5% 20.4%); /* main background color: BG0*/
-    --hover: hsla(202 13.6% 15.9% 0.1); /* channels and buttons when hovered: BG_DIM (0.1A) */
-    --active: hsla(202 13.6% 15.9% 0.2); /* channels and buttons when clicked or selected: BG_DIM (0.2A) */
-    --active-2: hsla(202 13.6% 15.9% 0.3); /* extra state for transparent buttons: BG_DIM (0.3A) */
-    --message-hover: hsl(202 13.6% 15.9% 0.1); /* messages when hovered: BG_DIM (0.1A) */
+    --hover: hsla(202, 13.6%, 15.9%, 0.4); /* channels and buttons when hovered: BG_DIM (0.1A) */
+    --active: hsla(199, 13.3%, 23.5%, 1); /* channels and buttons when clicked or selected: BG_DIM (0.2A) */
+    --active-2: hsla(202, 13.6%, 15.9%, 0.3); /* extra state for transparent buttons: BG_DIM (0.3A) */
+    --message-hover: hsl(202, 13.6%, 15.9%, 0.4); /* messages when hovered: BG_DIM (0.1A) */
 
     /* accent colors */
     --accent-1: var(--green-1); /* links and other accent text */
     --accent-2: var(--green-2); /* small accent elements */
-    --accent-3: var(--green-3); /* accent buttons */
-    --accent-4: var(--green-4); /* accent buttons when hovered */
+    --accent-3: var(--bg-1); /* accent buttons */
+    --accent-4: var(--green-2); /* accent buttons when hovered */
     --accent-5: var(--green-5); /* accent buttons when clicked */
-    --accent-new: var(--accent-2); /* stuff that's normally red like mute/deafen buttons */
+    --accent-new: var(--purple-1); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
@@ -117,8 +118,8 @@ body {
     /* border colors */
     --border-light: var(--hover); /* general light border color */
     --border: var(--active); /* general normal border color */
-    --border-hover: var(--active); /* border color of panels when hovered */
-    --button-border: hsl(202 13.6% 15.9%) ; /* neutral border color of buttons: BG_DIM (0.1A) */
+    --border-hover: var(--green); /* border color of panels when hovered */
+    --button-border: transparent ; /* neutral border color of buttons: BG_DIM (0.1A) */
 
     /* base colors*/
     /*RED*/
